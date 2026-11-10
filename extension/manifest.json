@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Lockd",
+  "description": "Keeps API keys out of the page and out of your AI agent's view: masks keys on screen, saves them to Lockd, types them into forms for you.",
+  "version": "0.1.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsCzWDGmGaOhIuBsuyjbVW+Hu9rVoJze7B6gXMqHeV6IXpR3LqqNK9GftqEI8T85acvcBpKZvkepMyOW2boll1ctNjfDRY+ibn3kA7t96BeXJKvYxGCkMRjrErBfVsIp8x57jZJONvRg5J4xHN6jmB/kySi3kW/ZN5KipILYu1I+I9ep+YIVrj9xQhLpFtrXqAq4pCIoYwctnF6eU/sv8iJuq7F+jE5NxzolOXMm4Sh+Oi0/TOGMBIRlXYaUDwvpS/I8eMgPRSHb0s3OMKMBzQcn9Po7OIzGzkF3zByFoYm7RkqP3s4T60g4sUB8O9Bok1Z+Ea2Rv8gnvuDtzZlvtwQIDAQAB",
+  "minimum_chrome_version": "110",
+  "permissions": ["nativeMessaging", "storage", "tabs", "alarms"],
+  "host_permissions": ["https://*/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    { "matches": ["https://*/*"], "js": ["detect.js", "content.js"], "run_at": "document_idle", "all_frames": false }
+  ],
+  "action": { "default_title": "Lockd", "default_popup": "popup.html" },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+}

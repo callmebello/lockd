@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><title>Lockd</title>
+<style>
+  :root{color-scheme:light dark;--bg:#fff;--fg:#1d211f;--dim:#6b7470;--brand:#2f9e75;--line:#e3e7e5}
+  @media (prefers-color-scheme:dark){:root{--bg:#262826;--fg:#eceeeb;--dim:#9aa39f;--brand:#7fd1ae;--line:#3a3d3a}}
+  body{margin:0;width:290px;padding:16px;background:var(--bg);color:var(--fg);font:13px -apple-system,system-ui,sans-serif}
+  h1{font-size:15px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+  .dot{width:9px;height:9px;border-radius:50%;background:#c0792b}.ok .dot{background:var(--brand)}
+  p{color:var(--dim);margin:6px 0;line-height:1.4}
+  label{display:flex;gap:8px;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+  small{display:block;color:var(--dim)}
+</style>
+<h1 id="h"><span class="dot"></span><span id="s">Connecting…</span></h1>
+<p id="d"></p>
+<label><input type="checkbox" id="shield" checked><span>Hide keys on pages<small>Page text and screenshots show sk-ant-•••• instead of the key.</small></span></label>
+<script src="popup.js"></script>
